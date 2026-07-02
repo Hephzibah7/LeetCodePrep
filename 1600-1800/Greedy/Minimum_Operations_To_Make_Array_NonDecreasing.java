@@ -68,7 +68,7 @@ step 3 3-2=1 to fourth element turning 2 to 3
 step 4 2-1=1 points to last turning 1 to 2,
 so basically in step 4  when 8 4 3 2 2 (x=1)-> 8 4 3 3 3 (x=1) -> 8 4 4 4 4 (x=1) ->
 8 8 8 8 8 (x=4) 
-Ans=4+1+1+1=7 or (largest element-smallest element in every decreasing subarray)
+Ans=4+1+1+1=7 or (largest element-smallest element in every decreasing subarray) (intuitive right?)
 so if (nums[i]>nums[i+1]), then to make it same we add nums[i]-nums[i+1] points to
 nums[i+1] element.
 
