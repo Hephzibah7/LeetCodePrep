@@ -1,56 +1,67 @@
 /*
-3858. Minimum Bitwise OR From Grid
-Solved
-Medium
-Topics
-premium lock icon
-Companies
-Hint
-You are given a 2D integer array grid of size m x n.
+3882. Minimum XOR Path in a Grid
 
-You must select exactly one integer from each row of the grid.
+You are given a 2D integer array grid of size m * n.
 
-Return an integer denoting the minimum possible bitwise OR of the selected integers from each row.
+You start at the top-left cell (0, 0) and want to reach the bottom-right cell (m - 1, n - 1).
+
+At each step, you may move either right or down.
+
+The cost of a path is defined as the bitwise XOR of all the values in the cells along that path, including the start and end cells.
+
+Return the minimum possible XOR value among all valid paths from (0, 0) to (m - 1, n - 1).
 
  
 
 Example 1:
 
-Input: grid = [[1,5],[2,4]]
+Input: grid = [[1,2],[3,4]]
 
-Output: 3
+Output: 6
 
 Explanation:
 
-Choose 1 from the first row and 2 from the second row.
-The bitwise OR of 1 | 2 = 3​​​​​​​, which is the minimum possible.
+There are two valid paths:
+
+(0, 0) → (0, 1) → (1, 1) with XOR: 1 XOR 2 XOR 4 = 7
+(0, 0) → (1, 0) → (1, 1) with XOR: 1 XOR 3 XOR 4 = 6
+The minimum XOR value among all valid paths is 6.
+
 Example 2:
 
-Input: grid = [[3,5],[6,4]]
+Input: grid = [[6,7],[5,8]]
 
-Output: 5
+Output: 9
 
 Explanation:
 
-Choose 5 from the first row and 4 from the second row.
-The bitwise OR of 5 | 4 = 5​​​​​​​, which is the minimum possible.
+There are two valid paths:
+
+(0, 0) → (0, 1) → (1, 1) with XOR: 6 XOR 7 XOR 8 = 9
+(0, 0) → (1, 0) → (1, 1) with XOR: 6 XOR 5 XOR 8 = 11
+The minimum XOR value among all valid paths is 9.
+
 Example 3:
 
-Input: grid = [[7,9,8]]
+Input: grid = [[2,7,5]]
 
-Output: 7
+Output: 0
 
 Explanation:
 
-Choosing 7 gives the minimum bitwise OR.
+There is only one valid path:
+
+(0, 0) → (0, 1) → (0, 2) with XOR: 2 XOR 7 XOR 5 = 0
+The XOR value of this path is 0, which is the minimum possible.
+
  
 
 Constraints:
 
-1 <= m == grid.length <= 105
-1 <= n == grid[i].length <= 105
-m * n <= 105
-1 <= grid[i][j] <= 105
+1 <= m == grid.length <= 1000
+1 <= n == grid[i].length <= 1000
+m * n <= 1000
+0 <= grid[i][j] <= 1023​
 */
 import java.util.*;
 public class Minimum_XOR_Path_To_Grid {
