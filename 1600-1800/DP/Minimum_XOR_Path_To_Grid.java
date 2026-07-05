@@ -63,6 +63,16 @@ Constraints:
 m * n <= 1000
 0 <= grid[i][j] <= 1023​
 */
+
+/*
+After reading the question,  it clearly gives us the idea that we have to use dp, but we cannot do the same pattern for dp, as
+we were doing for addition or multiplication, because XOR is not monotonous, which means local minimum does not guarentee
+global minimum. 
+Remember this pattern-
+So we take three paramters to define a state dp[i][j][val] - since constraints are less, the TC is ~O(10^6),
+we will get total 10^3*10^3 different paths, and we will choose that paths which ends with i=n-1 and j=m-1
+
+*/
 import java.util.*;
 public class Minimum_XOR_Path_To_Grid {
     public int minCost(int[][] grid) {
@@ -72,6 +82,7 @@ public class Minimum_XOR_Path_To_Grid {
         }
         return work(0,0,0,grid, grid.length, grid[0].length, dp);
     }
+    //the one with many if cases
     // int work(int i, int j, int val, int[][] grid, int m, int n, int[][][] dp){
     //     if(i==m-1 && j==n-1) return val^grid[m-1][n-1];
     //     if(i<m && j<n && dp[i][j][val]!=-1) return dp[i][j][val];
@@ -81,6 +92,8 @@ public class Minimum_XOR_Path_To_Grid {
     //     if(i>=m || j>=n) return Integer.MAX_VALUE;
     //     return dp[i][j][val]=ans;
     // }
+
+    //the one with only one if case
      int work(int i, int j, int val, int[][] grid, int m, int n, int[][][] dp){
         if(i==m-1 && j==n-1) return val^grid[m-1][n-1];
         if(dp[i][j][val]!=-1) return dp[i][j][val];
