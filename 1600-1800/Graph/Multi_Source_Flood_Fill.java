@@ -71,6 +71,12 @@ All (ri, ci​​​​​​​) in sources are distinct.
 
 
  */
+
+/*
+This question had me flummoxed for several hours, when I realized this is a simple BFS logic, ofc I knew it before, but I kept on adding
+a lot checks, but then I realized a simple line helped me avoid this checks, let me discuss what were those....
+According to the question, 
+*/
 import java.util.*; 
 class Group{
     int row;
