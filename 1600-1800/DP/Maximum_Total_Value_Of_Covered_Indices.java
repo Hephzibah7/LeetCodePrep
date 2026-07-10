@@ -61,7 +61,9 @@ For an index i, the value will only be included in the sum if
 case1-s.charAt(i+1)=='1' or
 case2-s.charAt(i)=='1' and check==0
 
-Note- in the case1, no matter whether the current value in the string is 0 or 1, can borrow 1 from i+1 if required
+Note- in the case1, no matter whether the current value in the string is 0 or 1, you can borrow 1 from i+1 if required
+
+ex-[40,20,14,5] str=0111
 */
 import java.util.Arrays;
 
