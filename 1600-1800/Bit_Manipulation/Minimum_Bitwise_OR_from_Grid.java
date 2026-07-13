@@ -73,7 +73,7 @@ class Solution {
 }
 
 The below solution is a beautiful way to solve this problem, where we use bit manipulation, we traverse bitwise, assuming through
-constraints that the number of bits cannot exceed 25, we start traversing from high bit to lover bit that is from 25 to 0,
+constraints that the number of bits cannot exceed 25, we start traversing from high bit to lower bit that is from 25 to 0,
 here for each bit say i that ranges from 25 to 0, we traverse entire row and entire matrix, why?
 We traverse entire row, to check whether we have atleast one number which does not have 1 in that ith position, thus working greedily,
 if yes then we go to the next row, if no, we now realize that this particular ith bit has to be checked in the ans because we could not
