@@ -81,13 +81,14 @@ public class Divisble_Game{
         int max=0;
         for(int i=0; i<n; i++) max=Math.max(max,nums[i]);
         int primes[]=new int[max+1];
+        //O(nlog(log n))
         for(int i=2; i<=(int)Math.sqrt(max); i++){
             if(primes[i]==1) continue;
             for(int j=i*i; j<=max; j=j+i){
                 primes[j]=1;
             }
         }
-        
+        //list.size()~80000~10^4
         ArrayList<Integer> list=new ArrayList<>();
         for(int i=2; i<=max; i++) {
             if(primes[i]==0) list.add(i);
@@ -97,6 +98,7 @@ public class Divisble_Game{
         }
         long sum=Long.MIN_VALUE;
         long fixed=0;
+        //10^4*10^3~10^7
         for(int i=0; i<list.size(); i++){
             long temp=work(list.get(i),nums);
             if(temp>sum){
