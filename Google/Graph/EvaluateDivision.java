@@ -1,3 +1,7 @@
+/*
+if a/b=x, then there is an edge between node a and b, with weight x, and there is another edges from node b to node a,
+the weight is 1/x, thus create a directed graph, and solve it using 
+ */
 package Google.Graph;
 
 import java.util.ArrayList;
