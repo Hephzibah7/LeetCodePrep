@@ -16,6 +16,27 @@ In the below question we are going or traversing backwards because
 if you are standing at index i, if subsequence indexes that is later indexes i+1..., require required energy you add
 monsters[i], otherwise if res if equal to 0, you need to add monsters[i]-bonus[i]
 
+
+Important observation-
+Observation 1-
+When you see a problem containing something like:
+
+"If your value becomes negative, it becomes 0"
+
+or
+
+"You lose X, but your resource cannot go below zero"
+
+or
+
+"You need enough resource to survive all future operations"
+
+immediately ask yourself:
+
+Can I calculate the minimum resource required backward instead of simulating the resource forward?
+
+Observation 2-
+"Apply X to every element from l to r" think about difference array
  */
 package Contest3rdQuestions;
 
