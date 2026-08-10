@@ -28,6 +28,8 @@ Step 1->Find all valid columns and add in the list.
 Step 2->Find all compatible columns and store it in the map
 Step 2->Traverse through each column now 1 to n, and for each column, loop the valid column
       that is for each valid pattern or column, nextdp[pattern1]=nextdp[pattern1]+dp[pattern2]
+        suppose there is 3 ways to reach state 1, or 3 columns are compatible to be put before column i of state 1,
+       so dp[1]=way1+way2+way3
 */
 package r1600r1800.DP;
 
