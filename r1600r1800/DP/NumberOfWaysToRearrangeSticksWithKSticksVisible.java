@@ -9,6 +9,19 @@ because now from rest of the numbers you need to make k sticks visible.
 Here we are traversing from right to left in order to reduce complexity
 dp[n][k]=number of ways to arrange n sticks with k sticks visible
 mind it n is not here the permuatation, but the number of sticks available
+
+
+But why we cannot traverse from left to right?
+[3,1,2,4,5]
+In above sequence we have 3 visible sticks, how?
+1 is not visible since 3 is greater
+2 is not visible since 3 is greater
+4 is visible since 3 is smaller
+5 is visible since 4 is smaller
+so we have to store maximum till index i, to find whether the current maximum is smaller than or larger then chosen number
+which decides whether the chosen number can be visible or not
+so here we need to store-k,index,currentmaximum so this are lot of states which increases complexity
+so we traverse from right so that we dont have to store current maximum
  */
 package r1600r1800.DP;
 import java.util.Arrays;
