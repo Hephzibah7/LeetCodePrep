@@ -1,5 +1,33 @@
 /*
 https://leetcode.com/problems/painting-a-grid-with-three-different-colors/
+
+Since there can be total 5000 cells, if you see the constraints, so there can be 3^5000 ways to color an m*n grid,
+to track each of em in order to obey the constraints in impractical and will give tle, so we will work smartly.
+Since clearly it can be noticed that the number of rows can be maximum 5, so its small.
+We can represent a specific color colbination of a column in base 3, since there can be 3 different colors.
+suppose our m=2, so total length is 3^2=9,
+Meaning?
+It means that there are total 9 ways to color an array of 2.
+GG,GB,GR,RR,RB,RG,BR,BB,BG ->9 ways
+And each of the ways can be represented using numbers,
+and each numbers can be written as in terms of base 3.
+
+A number n can be written as in terms of base 3,
+n=a0+a1*3^1+a2*3^2... 
+n=a0+3(a1+3a2...) is in the form n=r+qd,
+where r=a0 is the remainder when the number is divided by 3,
+r can be 0,1,2-> so 0->R, 1->B, 2->G, each remainder represents a color.
+a0=n%3, <-thus when moduling n with 3 for the first time you get first constant or the first color.
+Now n=Math.floor(q/3)->(a1+3(a2+a3*3^1...))
+Now when you again mod with new n, the r=a1, thus you get the second color.
+0->0*3^0+0*3^1=(RR)
+1->1*3^0+0*3^1=(BR)
+2->2*3^0+0*3^1=(GR)...thus you can represent till 8.
+
+Step 1->Find all valid columns and add in the list.
+Step 2->Find all compatible columns and store it in the map
+Step 2->Traverse through each column now 1 to n, and for each column, loop the valid column
+      that is for each valid pattern or column, nextdp[pattern1]=nextdp[pattern1]+dp[pattern2]
 */
 package r1600r1800.DP;
 
