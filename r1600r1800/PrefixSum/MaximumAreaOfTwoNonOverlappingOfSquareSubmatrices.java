@@ -1,3 +1,10 @@
+/*
+Learn how to find prefix sum of a submatrice of a matrix or grid using prefix sum 2D
+
+*/
+
+
+
 package r1600r1800.PrefixSum;
 
 public class MaximumAreaOfTwoNonOverlappingOfSquareSubmatrices {
