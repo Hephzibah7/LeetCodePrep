@@ -40,7 +40,7 @@ public class MaximumCapacityWithinBudget {
 
 /*
 Correct solution-
-
+Pattern-Boundary-pointer pattern
 This problem makes use of 2 pointers and prefix array
 We are using right pointer to find the boundary of a number.
 The below pattern is somewhat unusual do revise it
