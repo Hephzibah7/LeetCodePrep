@@ -1,5 +1,8 @@
 package Contest3rdQuestions;
-
+/*
+In a string aabbbccdd
+the difference between first occurrence of an element and the last occurrence of another element is always maximum
+*/
 public class MaximumGapBetweenStations {
     public int maximumGap(String skill, String station) {
         int n = skill.length();
