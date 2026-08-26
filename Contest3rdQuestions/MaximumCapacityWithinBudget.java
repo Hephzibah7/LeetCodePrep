@@ -44,6 +44,10 @@ Pattern-Boundary-pointer pattern
 This problem makes use of 2 pointers and prefix array
 We are using right pointer to find the boundary of a number.
 The below pattern is somewhat unusual do revise it
+sort the cost
+and taverse the cost array
+every capacity element will be paired with another maximum capacity element such that their sum is less than budget.
+Max every such capacity pairs
 public int maxCapacity(int[] costs, int[] capacity, int budget) {
         int n=costs.length;
         ArrayList<Integer> costlist = new ArrayList<>();
