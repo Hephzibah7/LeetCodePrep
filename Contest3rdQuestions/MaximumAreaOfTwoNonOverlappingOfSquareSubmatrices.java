@@ -5,7 +5,7 @@ Learn how to find prefix sum of a submatrice of a matrix or grid using prefix su
 
 
 
-package r1600r1800.PrefixSum;
+package Contest3rdQuestions;
 
 public class MaximumAreaOfTwoNonOverlappingOfSquareSubmatrices {
      public int maxArea(int[][] mat) {
