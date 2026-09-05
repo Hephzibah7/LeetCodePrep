@@ -1,7 +1,7 @@
 
-
 import java.util.Arrays;
 import java.util.HashMap;
+
 /*
 sort the array
 split into two halves
@@ -31,23 +31,26 @@ Motto- medians should not end up together
   |     |  <-starting from here medians can never end up together so right
 */
 public class WiggleSort {
-    public void wiggleSort(int[] nums) {
-      HashMap<Integer,Integer> map=new HashMap<>();
-      int n=nums.length;
-      for(int i=0; i<n; i++){
-        map.put(i,nums[i]);
-      }
-      Integer[] index = new Integer[nums.length];
-      for(int i=0; i<n; i++) index[i]=i;
-      Arrays.sort(index,(a,b)->nums[a]-nums[b]);
-      int i=(n+2-1)/2-1;
-      int j=n-1;
-      int k=0;
-      while(k<n){
-        if(k%2==0 && i>=0) nums[k++]=map.get(index[i--]);
-        else nums[k++]=map.get(index[j--]);
-       
-      }
-      
+  public void wiggleSort(int[] nums) {
+    HashMap<Integer, Integer> map = new HashMap<>();
+    int n = nums.length;
+    for (int i = 0; i < n; i++) {
+      map.put(i, nums[i]);
     }
+    Integer[] index = new Integer[nums.length];
+    for (int i = 0; i < n; i++)
+      index[i] = i;
+    Arrays.sort(index, (a, b) -> nums[a] - nums[b]);
+    int i = (n + 2 - 1) / 2 - 1;
+    int j = n - 1;
+    int k = 0;
+    while (k < n) {
+      if (k % 2 == 0 && i >= 0)
+        nums[k++] = map.get(index[i--]);
+      else
+        nums[k++] = map.get(index[j--]);
+
+    }
+
+  }
 }
