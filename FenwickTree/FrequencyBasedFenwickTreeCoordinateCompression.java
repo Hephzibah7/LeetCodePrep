@@ -48,7 +48,6 @@ public class FrequencyBasedFenwickTreeCoordinateCompression {
         return val;
     }
      public static void main(String[] args){
-        int max=0;
         int data[]={1,1,1,8,4};
         Arrays.sort(data);
         HashSet<Integer> set=new HashSet<>();
