@@ -85,3 +85,38 @@ public int maxCapacity(int[] costs, int[] capacity, int budget) {
 */
 
 }
+
+
+
+work(int arr[], int k){
+    int n=arr.length;
+    int left=0;
+    int right=0;
+    HashMap<Integer, Integer> map=new HashMap<>();
+    while(l<=r && r<n){
+        while(map.size()>k) {
+            map.put(arr[left],map.get(arr[left])-1);
+            if(map.get(arr[left])==0) map.remove(arr[left]);
+            left++;
+        }
+        map.put(arr[right],map.getOrDefault(arr[right],0)+1);
+        max=Math.max(max,right-left+1);
+        right++;
+    }
+    return max;
+}
+
+
+abcba
+
+abafdef
+
+abcfde    bafdef
+
+
+3 2 1 4
+
+work(String s){
+    int n-s.length();
+    
+}
