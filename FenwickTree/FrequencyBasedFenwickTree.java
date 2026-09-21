@@ -63,7 +63,7 @@ public class FrequencyBasedFenwickTree {
         return val;
     }
      public static void main(String[] args){
-        int max=0;
+         int max=0;
         int data[]={1,1,1,8,4};
         for(int i=0; i<5; i++) max=Math.max(max,data[i]);
         FrequencyBasedFenwickTree tree=new FrequencyBasedFenwickTree(max);
